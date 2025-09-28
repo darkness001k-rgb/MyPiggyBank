@@ -13,9 +13,13 @@ public class PiggyBank {
 
     // Methods
     public void addMoney(double amount) {
-        money += amount;
-        System.out.println("ยอดเงินใส่กระปุกของ " + ownerName +
-                " จำนวน " + amount + " บาท");
+        if (amount > 0) {
+            money += amount;
+            System.out.println("ยอดเงินใส่กระปุกของ " + ownerName +
+                    " จำนวน " + amount + " บาท");
+        } else {
+            System.out.println("ไม่สามารถใส่จำนวนเงินที่ติดลบหรือศูนย์ได้");
+        }
     }
 
     public void showMoney() {
